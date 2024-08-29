@@ -1,0 +1,11 @@
+type Time = int;
+type Message = 
+ record {
+   content: text;
+   sender: text;
+   timestamp: Time;
+ };
+service : {
+  getMessages: () -> (vec Message) query;
+  sendMessage: (text, text) -> ();
+}
